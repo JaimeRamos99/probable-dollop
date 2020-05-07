@@ -3,11 +3,11 @@ const nodo = require('./utils/nodo');
 const neo4j = require('./neo4j');
 const docker = require('./docker');
 
-async function particiones(){
+async function containers(){
     const particion = fs.readFileSync(__dirname + '/uploads/particion.txt').toString().split("\n");
     let mayor;
     for (let index = 0; index < particion.length; index++) {
-        let entero = parseInt(particion[index],10);
+        let entero = parseInt(particion[index], 10);
         if(index === 0){
             mayor = entero;
         }else{
@@ -16,17 +16,37 @@ async function particiones(){
             }
         }
     }
-for (let index = -1; index <= mayor; index++) {
-    if(index < 0){//el grafo completo
+    const inicial = fs.readFileSync(__dirname + '/uploads/inicial.txt').toString().split("\n");
+    inicial.shift()
+    matriz = [];
+    for (let index = 0; index < inicial.length; index++) {
+        matriz[index] = inicial[index].split(' ');
+    }
+    let logger = fs.createWriteStream(__dirname + '/uploads/aristas.txt',{flags: 'a'});
+
+    for (let index = 0; index < matriz.length; index++) {
+        let element = matriz[index];
+        element.shift()
+        for (let index2 = 0; index2 < element.length; index2++) {
+            if(particion[index] === particion[parseInt(element[index2])-1]){
+                logger.write(element[index2] + ' ');
+            }
+        }
+        if(index<matriz.length-1){
+            logger.write('\n');
+        }
+    }
+    logger.end();
+    /*for (let index = -1; index <= mayor; index++) {
+        if(index < 0){//el grafo completo
              docker(0)
-    }else{//el grafo por partici
+        }else{//el grafo por partici
             docker(index+1);
-    }   
-}  
+        }   
+    } */ 
 }
 async function insertgraphs(){
     let nodos = [];
-    //const inicial = fs.readFileSync(__dirname + '/uploads/inicial.txt').toString().split("\n");
     const particion = fs.readFileSync(__dirname + '/uploads/particion.txt').toString().split("\n");
     let mayor;
     for (let index = 0; index < particion.length; index++) {
@@ -42,12 +62,12 @@ async function insertgraphs(){
     }
     for (let index = -1; index <= mayor; index++) {
         if(index < 0){//el grafo completo
-            let filtrados =nodos.filter(obj => {
+            let filtrados = nodos.filter(obj => {
                 return obj
             });
              await neo4j('bolt://localhost:7687', filtrados);
         }else{//el grafo por partici
-            let filtrados =nodos.filter(obj => {
+            let filtrados = nodos.filter(obj => {
                 return obj.particion == index
             });
             await neo4j(`bolt://localhost:300${3*index+3}`, filtrados);
@@ -56,7 +76,18 @@ async function insertgraphs(){
     }
     
 }
+async function relationships(particionIndex){//-1 es el grafo completo, 0 es la particiòn 0
+    let m = [];
+    let aristas = fs.readFileSync(__dirname + '/uploads/aristas.txt').toString().split("\n");
+    let particion = fs.readFileSync(__dirname + '/uploads/particion.txt').toString().split("\n");
+    for (let index = 0; index < aristas.length; index++) {
+        m[index] = aristas[index].trim().split(' ');
+        //console.log(v);
+    };
+    console.log(particion);
+};
 module.exports = {
-    particiones,
-    insertgraphs
+    containers,
+    insertgraphs,
+    relationships
 }

@@ -23,15 +23,15 @@ app.use(router);
 app.use(bodyParser);
 
 router.post('/api/createContainers', upload.fields([{ name: 'initial', maxCount: 1 },{ name: 'partition', maxCount: 1 }]), async function(req, res){ //receive the graph (.txt's)
-  let r = await ctrl.particiones();
+  let r = await ctrl.containers();
   res.send('ok');
 });
 router.post('/api/createPartitions', async function(req, res){ //receive the graph (.txt's)
   let r = await ctrl.insertgraphs();
   res.send('ok');
 });
-router.get('/api/createRelations',async function(req, res){ //receive the graph (.txt's)
- 
+router.post('/api/createRelations',async function(req, res){ //receive the graph (.txt's)
+ await ctrl.relationships()
 });
 router.get('/api/', async function(req, res){ //receive a query 
     console.log('se conectaron');
