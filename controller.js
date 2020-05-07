@@ -65,26 +65,46 @@ async function insertgraphs(){
             let filtrados = nodos.filter(obj => {
                 return obj
             });
-             await neo4j('bolt://localhost:7687', filtrados);
+             await neo4j.createPartition('bolt://localhost:7687', filtrados);
         }else{//el grafo por partici
             let filtrados = nodos.filter(obj => {
                 return obj.particion == index
             });
-            await neo4j(`bolt://localhost:300${3*index+3}`, filtrados);
+            await neo4j.createPartition(`bolt://localhost:300${3*index+3}`, filtrados)
         }
         
     }
     
 }
-async function relationships(particionIndex){//-1 es el grafo completo, 0 es la particiòn 0
+async function relationships(){//-1 es el grafo completo, 0 es la particiòn 0
     let m = [];
+    //para una misma particiòn, itera sobre cada nodi en ella y crea sus aristas
     let aristas = fs.readFileSync(__dirname + '/uploads/aristas.txt').toString().split("\n");
     let particion = fs.readFileSync(__dirname + '/uploads/particion.txt').toString().split("\n");
-    for (let index = 0; index < aristas.length; index++) {
-        m[index] = aristas[index].trim().split(' ');
-        //console.log(v);
+    let mayor;
+    for (let index = 0; index < particion.length; index++) {
+        let entero = parseInt(particion[index], 10);
+        if(index === 0){
+            mayor = entero;
+        }else{
+            if(entero>mayor){
+                mayor = entero;
+            }
+        }
     };
-    console.log(particion);
+    for (let particionIndex = -1; particionIndex <= mayor; particionIndex++) {
+        if(particionIndex < 0){
+            let ip = 'bolt://localhost:7687';
+        }else{
+            let ip = `bolt://localhost:300${3 * particionIndex + 3}`;
+            for (let index = 0; index < aristas.length; index++) {
+                if(parseInt(particion[index]) === particionIndex){
+                    await neo4j.createRelationship(ip, index + 1, aristas[index].trim().split(' '));
+                };
+            };
+        };
+    }
+
 };
 module.exports = {
     containers,
