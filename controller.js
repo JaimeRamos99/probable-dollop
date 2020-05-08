@@ -37,13 +37,13 @@ async function containers(){
         }
     }
     logger.end();
-    /*for (let index = -1; index <= mayor; index++) {
+    for (let index = -1; index <= mayor; index++) {
         if(index < 0){//el grafo completo
              docker(0)
         }else{//el grafo por partici
             docker(index+1);
         }   
-    } */ 
+    } 
 }
 async function insertgraphs(){
     let nodos = [];
@@ -58,7 +58,7 @@ async function insertgraphs(){
                 mayor = entero;
             }
         }
-       nodos[index] = new nodo(index, "", particion[index]);
+       nodos[index] = new nodo(index+1, "", particion[index]);
     }
     for (let index = -1; index <= mayor; index++) {
         if(index < 0){//el grafo completo
@@ -95,6 +95,9 @@ async function relationships(){//-1 es el grafo completo, 0 es la particiòn 0
     for (let particionIndex = -1; particionIndex <= mayor; particionIndex++) {
         if(particionIndex < 0){
             let ip = 'bolt://localhost:7687';
+            for (let index = 0; index < aristas.length; index++) {
+                await neo4j.createRelationship(ip, index + 1, aristas[index].trim().split(' '));
+            };
         }else{
             let ip = `bolt://localhost:300${3 * particionIndex + 3}`;
             for (let index = 0; index < aristas.length; index++) {

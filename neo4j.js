@@ -9,16 +9,15 @@ async function createPartition(ip, array){
     await session.close();
 };
 async function createRelationship(ip, id, array){//['1','2']
-    console.log(ip);
-    console.log(id);
-    console.log(array);
-    console.log('---------------------------------------')
-    /*const driver = neo4j.driver(ip, neo4j.auth.basic('', ''));
+    for (let index = 0; index < array.length; index++) {
+        array[index] = parseInt(array[index]);
+    }
+    const driver = neo4j.driver(ip, neo4j.auth.basic('', ''));
     const session = driver.session();
-    await session.run('MATCH (n), (m) WHERE n.id IN $array AND m.id = $id CREATE (m)-[r:connected]->(n) CREATE (n)-[r2:connected]-> (m)  return r', {array: array, id: id}).then(function (result) {
+    await session.run('MATCH (n), (m) WHERE n.id IN $array AND m.id = $id CREATE (m)-[r:connected]->(n) return r', {array: array, id: id}).then(function (result) {
         console.log(result)
     });
-    await session.close();*/
+    await session.close();
 };
 module.exports = {
     createPartition, createRelationship
