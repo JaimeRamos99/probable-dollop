@@ -70,7 +70,7 @@ async function insertgraphs(){
             let filtrados = nodos.filter(obj => {
                 return obj.particion == index
             });
-            await neo4j.createPartition(`bolt://localhost:300${3*index+3}`, filtrados)
+            await neo4j.createPartition(`bolt://localhost:${3000 + 3 * index + 3}`, filtrados)
         }
         
     }
@@ -99,7 +99,7 @@ async function relationships(){//-1 es el grafo completo, 0 es la particiòn 0
                 await neo4j.createRelationship(ip, index + 1, aristas[index].trim().split(' '));
             };
         }else{
-            let ip = `bolt://localhost:300${3 * particionIndex + 3}`;
+            let ip = `bolt://localhost:${3000 + 3 * particionIndex + 3}`;
             for (let index = 0; index < aristas.length; index++) {
                 if(parseInt(particion[index]) === particionIndex){
                     await neo4j.createRelationship(ip, index + 1, aristas[index].trim().split(' '));
