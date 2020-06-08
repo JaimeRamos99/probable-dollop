@@ -4,7 +4,6 @@ async function createPartition(ip, array){
     const session = driver.session();
     await session.run('UNWIND $r AS map create(n) SET n = map',{r: array}).then(function (result) {
         console.log(result)
-        
     });
     await session.close();
 };

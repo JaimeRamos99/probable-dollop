@@ -20,13 +20,13 @@ app.listen(8080, ()=>{
 });
 
 app.use(router);
-app.use(bodyParser);
+app.use(bodyParser.json());
 
-router.post('/api/createContainers', upload.fields([{ name: 'initial', maxCount: 1 },{ name: 'partition', maxCount: 1 }]), async function(req, res){ //receive the graph (.txt's)
+router.post('/server/createContainers', upload.fields([{ name: 'initial', maxCount: 1 },{ name: 'partition', maxCount: 1 }]), async function(req, res){ //receive the graph (.txt's)
   let r = await ctrl.containers();
   res.status(200).send('ok');
 });
-router.post('/api/createPartitions', async function(req, res){ //receive the graph (.txt's)
+/*router.post('/api/createPartitions', async function(req, res){ //receive the graph (.txt's)
   let r = await ctrl.insertgraphs();
   res.status(200).send('ok');
 });
@@ -36,4 +36,4 @@ router.post('/api/createRelations',async function(req, res){ //receive the graph
 });
 router.get('/api/', async function(req, res){ //receive a query 
     console.log('se conectaron');
-});
+});*/

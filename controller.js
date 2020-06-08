@@ -2,7 +2,6 @@ const fs = require('fs');
 const nodo = require('./utils/nodo');
 const neo4j = require('./neo4j');
 const docker = require('./docker');
-
 async function containers(){
     const particion = fs.readFileSync(__dirname + '/uploads/particion.txt').toString().split("\n");
     let mayor;
@@ -37,13 +36,17 @@ async function containers(){
         }
     }
     logger.end();
+    let indexxx=0;
     for (let index = -1; index <= mayor; index++) {
         if(index < 0){//el grafo completo
-             docker(0)
+             docker(0);
         }else{//el grafo por partici
             docker(index+1);
-        }   
-    } 
+        } 
+    }
+    setTimeout(async() => {
+        await insertgraphs();
+    }, 120000);
 }
 async function insertgraphs(){
     let nodos = [];
@@ -74,7 +77,9 @@ async function insertgraphs(){
         }
         
     }
-    
+    setTimeout(async() => {
+        await relationships();
+    }, 10000);
 }
 async function relationships(){//-1 es el grafo completo, 0 es la particiòn 0
     let m = [];
