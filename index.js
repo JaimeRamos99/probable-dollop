@@ -31,7 +31,7 @@ router.post(
   ]),
   async function (req, res) {
     //receive the graph (.txt's)
-    //let r = await ctrl.containers();
+    let r = await ctrl.containers();
     res.status(200).send('ok');
   }
 );
