@@ -6,26 +6,26 @@ async function createPartition(ip, array) {
   await session
     .run('UNWIND $r AS map create(n) SET n = map', { r: array })
     .then(function (result) {
-      console.log(result);
     });
   await session.close();
 }
 async function createRelationship(ip, id, array) {
   //['1','2']
+  let newArray = [];
   for (let index = 0; index < array.length; index++) {
-    array[index] = parseInt(array[index]);
+    newArray[index] = parseInt(array[index]);
   }
   const driver = neo4j.driver(ip, neo4j.auth.basic('', ''));
   const session = driver.session();
   await session
     .run(
       'MATCH (n), (m) WHERE n.id IN $array AND m.id = $id CREATE (m)-[r:connected]->(n) return r',
-      { array: array, id: id }
+      { array: newArray, id: id }
     )
     .then(function (result) {
-      console.log(result);
     });
   await session.close();
+  newArray = [];
 }
 module.exports = {
   createPartition,

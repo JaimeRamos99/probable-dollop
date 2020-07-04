@@ -23,7 +23,11 @@ async function containers() {
     .readFileSync(__dirname + '/uploads/initial.txt')
     .toString()
     .split('\n');
-  inicial.shift(); //saco la primera linea, porque esa indica las dimensiones del grapo y su tipo
+  let firstLine = inicial.shift(); //saco la primera linea, porque esa indica las dimensiones del grapo y su tipo
+  let graphType = firstLine.split(' ')[2];
+  if (graphType === undefined) {
+    graphType = 0;
+  }
   matriz = [];
   for (let index = 0; index < inicial.length; index++) {
     //en la matriz, en cada fila se almacenan los nodos al que el nodo en cuestión tiene enlaces, el id del nodo en cuestión es el número de fila
@@ -38,7 +42,9 @@ async function containers() {
   for (let index = 0; index < matriz.length; index++) {
     //en este ciclo se crea el archivo aristas.txt que a cada nodo le indica las aristas que están dentro de su misma partición
     let element = matriz[index];
-    element.shift(); //el primer valor de cada fila no se usa porque es el peso
+    if (graphType !== 0) {
+      element.shift(); //el primer valor de cada fila no se usa porque es el peso
+    }
     for (let index2 = 0; index2 < element.length; index2++) {
       if (particion[index] === particion[parseInt(element[index2]) - 1]) {
         logger.write(element[index2] + ' ');
@@ -92,7 +98,7 @@ async function insertgraphs() {
       });
       await neo4j.createPartition('bolt://localhost:7687', filtrados);
     } else {
-      //el grafo por partici
+      //el grafo por partición
       let filtrados = nodos.filter((obj) => {
         return obj.particion == index;
       });
@@ -108,8 +114,7 @@ async function insertgraphs() {
 }
 async function relationships() {
   //-1 es el grafo completo, 0 es la particiòn 0
-  let m = [];
-  //para una misma particiòn, itera sobre cada nodi en ella y crea sus aristas
+  //para una misma partición, itera sobre cada nodi en ella y crea sus aristas
   let aristas = fs
     .readFileSync(__dirname + '/uploads/aristas.txt')
     .toString()
@@ -119,6 +124,7 @@ async function relationships() {
     .toString()
     .split('\n');
   let mayor;
+  //buscando el número de particiones, este número se almacena en la variable "mayor"
   for (let index = 0; index < particion.length; index++) {
     let entero = parseInt(particion[index], 10);
     if (index === 0) {
@@ -131,6 +137,7 @@ async function relationships() {
   }
   for (let particionIndex = -1; particionIndex <= mayor; particionIndex++) {
     if (particionIndex < 0) {
+      // le mando todo el grafo, porque en este contenedor estará todo el grafo completo
       let ip = 'bolt://localhost:7687';
       for (let index = 0; index < aristas.length; index++) {
         await neo4j.createRelationship(
@@ -140,8 +147,10 @@ async function relationships() {
         );
       }
     } else {
+      // para las particiones
       let ip = `bolt://localhost:${3000 + 3 * particionIndex + 3}`;
       for (let index = 0; index < aristas.length; index++) {
+        //verifico que sea la partición correspondiente
         if (parseInt(particion[index]) === particionIndex) {
           await neo4j.createRelationship(
             ip,
