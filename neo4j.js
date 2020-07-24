@@ -25,7 +25,20 @@ async function createRelationship(ip, id, array) {
   await session.close();
   newArray = [];
 }
+async function retreiveNode(ip, idNode) {
+  const driver = neo4j.driver(ip, neo4j.auth.basic('', ''));
+  const session = driver.session();
+  await session
+    .run('MATCH (n) WHERE n.id = $id return n', { id: idNode })
+    .then(function (result) {
+      result.records.forEach(function (record) {
+        console.log(record._fields[0].properties);
+      });
+    });
+  await session.close();
+}
 module.exports = {
   createPartition,
   createRelationship,
+  retreiveNode,
 };

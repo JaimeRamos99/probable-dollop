@@ -6,6 +6,7 @@ const path = require('path');
 const router = express.Router();
 const app = express();
 const ctrl = require('./controller');
+const neo4j = require('./neo4j');
 const storage = multer.diskStorage({
   destination: function (req, file, cb) {
     cb(null, path.join(__dirname, './uploads'));
@@ -37,7 +38,9 @@ router.post(
 );
 
 router.get('/query/:id', async function (req, res) {
-  let query = req.params.id;
-  console.log(query);
+  let idNode = parseInt(req.params.id);
+  let partition = await ctrl.query(idNode);
+  let ip = `bolt://localhost:${3000 + 3 * partition + 3}`;
+  await neo4j.retreiveNode(ip, idNode);
   res.status(200).send('ok');
 });

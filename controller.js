@@ -94,6 +94,10 @@ async function insertgraphs() {
       nodos[index] = new nodo(index + 1, '', particion[index]);
     }
   }
+  console.log('Tamaño del mapa distribución:' + distribucion.size);
+  console.log(distribucion.get(1));
+  console.log(distribucion.get(2));
+  console.log(distribucion.get(3));
   for (let index = -1; index <= mayor; index++) {
     if (index < 0) {
       //el grafo completo
@@ -166,7 +170,12 @@ async function relationships() {
     }
   }
 }
+async function query(idNode) {
+  let partition = distribucion.get(idNode);
+  return partition;
+}
 //controller for query
 module.exports = {
   containers,
+  query,
 };
