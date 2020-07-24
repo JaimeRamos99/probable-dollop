@@ -35,3 +35,9 @@ router.post(
     res.status(200).send('ok');
   }
 );
+
+router.get('/query/:id', async function (req, res) {
+  let query = req.params.id;
+  console.log(query);
+  res.status(200).send('ok');
+});

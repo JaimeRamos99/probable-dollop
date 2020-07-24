@@ -2,6 +2,8 @@ const fs = require('fs');
 const nodo = require('./utils/nodo');
 const neo4j = require('./neo4j');
 const docker = require('./docker');
+let distribucion = new Map();
+
 async function containers() {
   const particion = fs
     .readFileSync(__dirname + '/uploads/partition.txt')
@@ -11,6 +13,7 @@ async function containers() {
   for (let index = 0; index < particion.length; index++) {
     //buscando el número de particiones, este número se almacena en la variable "mayor"
     let entero = parseInt(particion[index], 10);
+
     if (index === 0) {
       mayor = entero;
     } else {
@@ -86,6 +89,7 @@ async function insertgraphs() {
         mayor = entero;
       }
     }
+    distribucion.set(index + 1, particion[index]);
     if (particion[index]) {
       nodos[index] = new nodo(index + 1, '', particion[index]);
     }
@@ -162,6 +166,7 @@ async function relationships() {
     }
   }
 }
+//controller for query
 module.exports = {
   containers,
 };
