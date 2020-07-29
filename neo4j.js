@@ -32,7 +32,7 @@ async function retreiveNode(ip, idNode) {
     .run('MATCH (n) WHERE n.id = $id return n', { id: idNode })
     .then(function (result) {
       result.records.forEach(function (record) {
-        console.log(record._fields[0].properties);
+        //console.log(record._fields[0].properties);
       });
     });
   await session.close();

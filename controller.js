@@ -3,7 +3,6 @@ const nodo = require('./utils/nodo');
 const neo4j = require('./neo4j');
 const docker = require('./docker');
 let distribucion = new Map();
-
 async function containers() {
   const particion = fs
     .readFileSync(__dirname + '/uploads/partition.txt')
@@ -71,7 +70,7 @@ async function containers() {
   }
   setTimeout(async () => {
     await insertgraphs();
-  }, 60000);
+  }, 80000);
 }
 async function insertgraphs() {
   let nodos = [];
@@ -94,10 +93,6 @@ async function insertgraphs() {
       nodos[index] = new nodo(index + 1, '', particion[index]);
     }
   }
-  console.log('Tamaño del mapa distribución:' + distribucion.size);
-  console.log(distribucion.get(1));
-  console.log(distribucion.get(2));
-  console.log(distribucion.get(3));
   for (let index = -1; index <= mayor; index++) {
     if (index < 0) {
       //el grafo completo
@@ -118,7 +113,7 @@ async function insertgraphs() {
   }
   setTimeout(async () => {
     await relationships();
-  }, 10000);
+  }, 80000);
 }
 async function relationships() {
   //-1 es el grafo completo, 0 es la particiòn 0
@@ -171,6 +166,15 @@ async function relationships() {
   }
 }
 async function query(idNode) {
+  if (distribucion.size === 0) {
+    const particion = fs
+      .readFileSync(__dirname + '/uploads/partition.txt')
+      .toString()
+      .split('\n');
+    for (let index = 0; index < particion.length; index++) {
+      distribucion.set(index + 1, particion[index]);
+    }
+  }
   let partition = distribucion.get(idNode);
   return partition;
 }
