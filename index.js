@@ -8,7 +8,8 @@ const app = express();
 const ctrl = require('./controller');
 const neo4j = require('./neo4j');
 const now = require('performance-now');
-const t0 = now();
+let flag = false;
+let t0;
 const storage = multer.diskStorage({
   destination: function (req, file, cb) {
     cb(null, path.join(__dirname, './uploads'));
@@ -43,6 +44,10 @@ router.get('/query/:id', async function (req, res) {
   let idNode = parseInt(req.params.id);
   let partition = await ctrl.query(idNode);
   let ip = `bolt://localhost:${3000 + 3 * partition + 3}`;
+  if (!flag) {
+    flag = true;
+    t0 = now();
+  }
   await neo4j.retreiveNode(ip, idNode);
   if (idNode === 1001) {
     let t1 = now();

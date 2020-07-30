@@ -3,6 +3,7 @@ const nodo = require('./utils/nodo');
 const neo4j = require('./neo4j');
 const docker = require('./docker');
 let distribucion = new Map();
+
 async function containers() {
   const particion = fs
     .readFileSync(__dirname + '/uploads/partition.txt')
@@ -40,16 +41,18 @@ async function containers() {
   let logger = fs.createWriteStream(__dirname + '/uploads/aristas.txt', {
     flags: 'a',
   });
-
   for (let index = 0; index < matriz.length; index++) {
     //en este ciclo se crea el archivo aristas.txt que a cada nodo le indica las aristas que están dentro de su misma partición
     let element = matriz[index];
     if (graphType !== 0) {
+      //grafos con peso
       element.shift(); //el primer valor de cada fila no se usa porque es el peso
     }
-    for (let index2 = 0; index2 < element.length; index2++) {
-      if (particion[index] === particion[parseInt(element[index2]) - 1]) {
-        logger.write(element[index2] + ' ');
+    if (element) {
+      for (let index2 = 0; index2 < element.length; index2++) {
+        if (particion[index] === particion[parseInt(element[index2]) - 1]) {
+          logger.write(element[index2] + ' ');
+        }
       }
     }
     if (index < matriz.length - 1) {
@@ -72,6 +75,7 @@ async function containers() {
     await insertgraphs();
   }, 80000);
 }
+
 async function insertgraphs() {
   let nodos = [];
   const particion = fs
@@ -111,10 +115,12 @@ async function insertgraphs() {
       );
     }
   }
+  /*
   setTimeout(async () => {
     await relationships();
-  }, 80000);
+  }, 80000);*/
 }
+
 async function relationships() {
   //-1 es el grafo completo, 0 es la particiòn 0
   //para una misma partición, itera sobre cada nodi en ella y crea sus aristas
@@ -165,6 +171,7 @@ async function relationships() {
     }
   }
 }
+
 async function query(idNode) {
   if (distribucion.size === 0) {
     const particion = fs
@@ -178,7 +185,7 @@ async function query(idNode) {
   let partition = distribucion.get(idNode);
   return partition;
 }
-//controller for query
+
 module.exports = {
   containers,
   query,
