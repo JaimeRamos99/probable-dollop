@@ -1,6 +1,7 @@
 'use strict';
 const express = require('express');
 const bodyParser = require('body-parser');
+const { exec } = require('child_process');
 const multer = require('multer');
 const path = require('path');
 const router = express.Router();
@@ -20,8 +21,8 @@ const storage = multer.diskStorage({
 });
 
 const upload = multer({ storage: storage });
-app.listen(8080, () => {
-  console.log('API escuchando en puerto 8080');
+app.listen(8010, () => {
+  console.log('API escuchando en puerto 8010');
 });
 
 app.use(router);
@@ -47,11 +48,22 @@ router.get('/query/:id', async function (req, res) {
   if (!flag) {
     flag = true;
     t0 = now();
+    exec('docker stats > fiveThousand5k.txt', function (error, stdout, stderr) {
+      if (error) {
+        console.log(`error: ${error.message}`);
+      }
+      if (stderr) {
+        console.log(`error: ${stderr}`);
+      }
+    });
   }
+
   await neo4j.retreiveNode(ip, idNode);
-  if (idNode === 1001) {
+  if (idNode === 5001) {
     let t1 = now();
+    flag = false;
     console.log(`${(t1 - t0).toFixed(5)} milliseconds.`);
+    process.exit(1);
   }
   res.status(200).send('ok');
 });

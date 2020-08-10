@@ -1,0 +1,180 @@
+[2J[HCONTAINER ID        NAME                CPU %               MEM USAGE / LIMIT     MEM %               NET I/O             BLOCK I/O           PIDS
+5904f4e4a0a9        db0                 1.78%               455.3MiB / 11.61GiB   3.83%               63.1kB / 1.83kB     190MB / 639kB       61
+f44dd03b0322        db2                 2.25%               837.6MiB / 11.61GiB   7.04%               786kB / 615kB       174MB / 639kB       217
+29c1fe575679        db3                 1.65%               401.1MiB / 11.61GiB   3.37%               56.8kB / 0B         95.4MB / 639kB      56
+de5e5e4e37a8        db1                 28.42%              773.8MiB / 11.61GiB   6.51%               578kB / 453kB       179MB / 639kB       255
+[2J[HCONTAINER ID        NAME                CPU %               MEM USAGE / LIMIT     MEM %               NET I/O             BLOCK I/O           PIDS
+5904f4e4a0a9        db0                 1.78%               455.3MiB / 11.61GiB   3.83%               63.1kB / 1.83kB     190MB / 639kB       61
+f44dd03b0322        db2                 2.25%               837.6MiB / 11.61GiB   7.04%               786kB / 615kB       174MB / 639kB       217
+29c1fe575679        db3                 1.65%               401.1MiB / 11.61GiB   3.37%               56.8kB / 0B         95.4MB / 639kB      56
+de5e5e4e37a8        db1                 28.42%              773.8MiB / 11.61GiB   6.51%               578kB / 453kB       179MB / 639kB       255
+[2J[HCONTAINER ID        NAME                CPU %               MEM USAGE / LIMIT     MEM %               NET I/O             BLOCK I/O           PIDS
+5904f4e4a0a9        db0                 1.06%               455.4MiB / 11.61GiB   3.83%               63.3kB / 1.96kB     190MB / 639kB       61
+f44dd03b0322        db2                 252.80%             860MiB / 11.61GiB     7.23%               1.37MB / 1.07MB     174MB / 639kB       218
+29c1fe575679        db3                 0.51%               401.1MiB / 11.61GiB   3.37%               56.8kB / 0B         95.4MB / 639kB      56
+de5e5e4e37a8        db1                 202.82%             793.1MiB / 11.61GiB   6.67%               882kB / 688kB       179MB / 639kB       257
+[2J[HCONTAINER ID        NAME                CPU %               MEM USAGE / LIMIT     MEM %               NET I/O             BLOCK I/O           PIDS
+5904f4e4a0a9        db0                 1.06%               455.4MiB / 11.61GiB   3.83%               63.3kB / 1.96kB     190MB / 639kB       61
+f44dd03b0322        db2                 252.80%             860MiB / 11.61GiB     7.23%               1.37MB / 1.07MB     174MB / 639kB       218
+29c1fe575679        db3                 0.51%               401.1MiB / 11.61GiB   3.37%               56.8kB / 0B         95.4MB / 639kB      56
+de5e5e4e37a8        db1                 202.82%             793.1MiB / 11.61GiB   6.67%               882kB / 688kB       179MB / 639kB       257
+[2J[HCONTAINER ID        NAME                CPU %               MEM USAGE / LIMIT     MEM %               NET I/O             BLOCK I/O           PIDS
+5904f4e4a0a9        db0                 7.89%               455.4MiB / 11.61GiB   3.83%               63.9kB / 2.59kB     190MB / 639kB       61
+f44dd03b0322        db2                 313.11%             868MiB / 11.61GiB     7.30%               1.95MB / 1.45MB     174MB / 639kB       243
+29c1fe575679        db3                 0.42%               401.1MiB / 11.61GiB   3.37%               56.8kB / 0B         95.4MB / 639kB      56
+de5e5e4e37a8        db1                 283.37%             798.9MiB / 11.61GiB   6.72%               1.18MB / 887kB      179MB / 639kB       269
+[2J[HCONTAINER ID        NAME                CPU %               MEM USAGE / LIMIT     MEM %               NET I/O             BLOCK I/O           PIDS
+5904f4e4a0a9        db0                 7.89%               455.4MiB / 11.61GiB   3.83%               63.9kB / 2.59kB     190MB / 639kB       61
+f44dd03b0322        db2                 313.11%             868MiB / 11.61GiB     7.30%               1.95MB / 1.45MB     174MB / 639kB       243
+29c1fe575679        db3                 0.42%               401.1MiB / 11.61GiB   3.37%               56.8kB / 0B         95.4MB / 639kB      56
+de5e5e4e37a8        db1                 283.37%             798.9MiB / 11.61GiB   6.72%               1.18MB / 887kB      179MB / 639kB       269
+[2J[HCONTAINER ID        NAME                CPU %               MEM USAGE / LIMIT     MEM %               NET I/O             BLOCK I/O           PIDS
+5904f4e4a0a9        db0                 0.48%               455.4MiB / 11.61GiB   3.83%               63.9kB / 2.59kB     190MB / 639kB       61
+f44dd03b0322        db2                 341.27%             881.1MiB / 11.61GiB   7.41%               2.17MB / 1.64MB     174MB / 639kB       262
+29c1fe575679        db3                 0.50%               401.1MiB / 11.61GiB   3.37%               56.8kB / 0B         95.4MB / 639kB      56
+de5e5e4e37a8        db1                 279.97%             808.3MiB / 11.61GiB   6.80%               1.3MB / 987kB       179MB / 639kB       333
+[2J[HCONTAINER ID        NAME                CPU %               MEM USAGE / LIMIT     MEM %               NET I/O             BLOCK I/O           PIDS
+5904f4e4a0a9        db0                 0.48%               455.4MiB / 11.61GiB   3.83%               63.9kB / 2.59kB     190MB / 639kB       61
+f44dd03b0322        db2                 341.27%             881.1MiB / 11.61GiB   7.41%               2.17MB / 1.64MB     174MB / 639kB       262
+29c1fe575679        db3                 0.50%               401.1MiB / 11.61GiB   3.37%               56.8kB / 0B         95.4MB / 639kB      56
+de5e5e4e37a8        db1                 279.97%             808.3MiB / 11.61GiB   6.80%               1.3MB / 987kB       179MB / 639kB       333
+[2J[HCONTAINER ID        NAME                CPU %               MEM USAGE / LIMIT     MEM %               NET I/O             BLOCK I/O           PIDS
+5904f4e4a0a9        db0                 0.44%               455.4MiB / 11.61GiB   3.83%               63.9kB / 2.59kB     190MB / 639kB       61
+f44dd03b0322        db2                 401.54%             886.3MiB / 11.61GiB   7.45%               2.18MB / 1.66MB     174MB / 639kB       285
+29c1fe575679        db3                 0.46%               401.1MiB / 11.61GiB   3.37%               56.8kB / 0B         95.4MB / 639kB      56
+de5e5e4e37a8        db1                 358.08%             815.1MiB / 11.61GiB   6.85%               1.37MB / 1.06MB     179MB / 639kB       367
+[2J[HCONTAINER ID        NAME                CPU %               MEM USAGE / LIMIT     MEM %               NET I/O             BLOCK I/O           PIDS
+5904f4e4a0a9        db0                 0.44%               455.4MiB / 11.61GiB   3.83%               63.9kB / 2.59kB     190MB / 639kB       61
+f44dd03b0322        db2                 401.54%             886.3MiB / 11.61GiB   7.45%               2.18MB / 1.66MB     174MB / 639kB       285
+29c1fe575679        db3                 0.46%               401.1MiB / 11.61GiB   3.37%               56.8kB / 0B         95.4MB / 639kB      56
+de5e5e4e37a8        db1                 358.08%             815.1MiB / 11.61GiB   6.85%               1.37MB / 1.06MB     179MB / 639kB       367
+[2J[HCONTAINER ID        NAME                CPU %               MEM USAGE / LIMIT     MEM %               NET I/O             BLOCK I/O           PIDS
+5904f4e4a0a9        db0                 0.46%               455.4MiB / 11.61GiB   3.83%               63.9kB / 2.59kB     190MB / 639kB       61
+f44dd03b0322        db2                 357.11%             1.328GiB / 11.61GiB   11.43%              2.25MB / 1.76MB     174MB / 639kB       313
+29c1fe575679        db3                 0.47%               401.1MiB / 11.61GiB   3.37%               56.8kB / 0B         95.4MB / 639kB      56
+de5e5e4e37a8        db1                 334.13%             1.166GiB / 11.61GiB   10.04%              1.41MB / 1.12MB     179MB / 639kB       462
+[2J[HCONTAINER ID        NAME                CPU %               MEM USAGE / LIMIT     MEM %               NET I/O             BLOCK I/O           PIDS
+5904f4e4a0a9        db0                 0.46%               455.4MiB / 11.61GiB   3.83%               63.9kB / 2.59kB     190MB / 639kB       61
+f44dd03b0322        db2                 357.11%             1.328GiB / 11.61GiB   11.43%              2.25MB / 1.76MB     174MB / 639kB       313
+29c1fe575679        db3                 0.47%               401.1MiB / 11.61GiB   3.37%               56.8kB / 0B         95.4MB / 639kB      56
+de5e5e4e37a8        db1                 334.13%             1.166GiB / 11.61GiB   10.04%              1.41MB / 1.12MB     179MB / 639kB       462
+[2J[HCONTAINER ID        NAME                CPU %               MEM USAGE / LIMIT     MEM %               NET I/O             BLOCK I/O           PIDS
+5904f4e4a0a9        db0                 0.56%               455.4MiB / 11.61GiB   3.83%               63.9kB / 2.59kB     190MB / 639kB       61
+f44dd03b0322        db2                 264.36%             1.332GiB / 11.61GiB   11.47%              2.33MB / 1.88MB     174MB / 639kB       328
+29c1fe575679        db3                 0.58%               401.1MiB / 11.61GiB   3.37%               56.8kB / 0B         95.4MB / 639kB      56
+de5e5e4e37a8        db1                 302.14%             1.184GiB / 11.61GiB   10.20%              1.63MB / 1.4MB      179MB / 639kB       473
+[2J[HCONTAINER ID        NAME                CPU %               MEM USAGE / LIMIT     MEM %               NET I/O             BLOCK I/O           PIDS
+5904f4e4a0a9        db0                 0.56%               455.4MiB / 11.61GiB   3.83%               63.9kB / 2.59kB     190MB / 639kB       61
+f44dd03b0322        db2                 264.36%             1.332GiB / 11.61GiB   11.47%              2.33MB / 1.88MB     174MB / 639kB       328
+29c1fe575679        db3                 0.58%               401.1MiB / 11.61GiB   3.37%               56.8kB / 0B         95.4MB / 639kB      56
+de5e5e4e37a8        db1                 302.14%             1.184GiB / 11.61GiB   10.20%              1.63MB / 1.4MB      179MB / 639kB       473
+[2J[HCONTAINER ID        NAME                CPU %               MEM USAGE / LIMIT     MEM %               NET I/O             BLOCK I/O           PIDS
+5904f4e4a0a9        db0                 0.79%               455.4MiB / 11.61GiB   3.83%               63.9kB / 2.59kB     190MB / 639kB       61
+f44dd03b0322        db2                 271.00%             1.333GiB / 11.61GiB   11.48%              2.45MB / 2.05MB     174MB / 639kB       330
+29c1fe575679        db3                 0.75%               401.1MiB / 11.61GiB   3.37%               56.8kB / 0B         95.4MB / 639kB      56
+de5e5e4e37a8        db1                 263.72%             1.186GiB / 11.61GiB   10.21%              1.71MB / 1.5MB      179MB / 639kB       474
+[2J[HCONTAINER ID        NAME                CPU %               MEM USAGE / LIMIT     MEM %               NET I/O             BLOCK I/O           PIDS
+5904f4e4a0a9        db0                 0.79%               455.4MiB / 11.61GiB   3.83%               63.9kB / 2.59kB     190MB / 639kB       61
+f44dd03b0322        db2                 271.00%             1.333GiB / 11.61GiB   11.48%              2.45MB / 2.05MB     174MB / 639kB       330
+29c1fe575679        db3                 0.75%               401.1MiB / 11.61GiB   3.37%               56.8kB / 0B         95.4MB / 639kB      56
+de5e5e4e37a8        db1                 263.72%             1.186GiB / 11.61GiB   10.21%              1.71MB / 1.5MB      179MB / 639kB       474
+[2J[HCONTAINER ID        NAME                CPU %               MEM USAGE / LIMIT     MEM %               NET I/O             BLOCK I/O           PIDS
+5904f4e4a0a9        db0                 0.68%               455.4MiB / 11.61GiB   3.83%               63.9kB / 2.59kB     190MB / 639kB       61
+f44dd03b0322        db2                 265.11%             1.335GiB / 11.61GiB   11.49%              2.6MB / 2.19MB      174MB / 639kB       333
+29c1fe575679        db3                 0.59%               401.1MiB / 11.61GiB   3.37%               56.8kB / 0B         95.4MB / 639kB      56
+de5e5e4e37a8        db1                 239.12%             1.242GiB / 11.61GiB   10.70%              1.83MB / 1.65MB     179MB / 639kB       476
+[2J[HCONTAINER ID        NAME                CPU %               MEM USAGE / LIMIT     MEM %               NET I/O             BLOCK I/O           PIDS
+5904f4e4a0a9        db0                 0.68%               455.4MiB / 11.61GiB   3.83%               63.9kB / 2.59kB     190MB / 639kB       61
+f44dd03b0322        db2                 265.11%             1.335GiB / 11.61GiB   11.49%              2.6MB / 2.19MB      174MB / 639kB       333
+29c1fe575679        db3                 0.59%               401.1MiB / 11.61GiB   3.37%               56.8kB / 0B         95.4MB / 639kB      56
+de5e5e4e37a8        db1                 239.12%             1.242GiB / 11.61GiB   10.70%              1.83MB / 1.65MB     179MB / 639kB       476
+[2J[HCONTAINER ID        NAME                CPU %               MEM USAGE / LIMIT     MEM %               NET I/O             BLOCK I/O           PIDS
+5904f4e4a0a9        db0                 0.87%               453.2MiB / 11.61GiB   3.81%               63.9kB / 2.59kB     190MB / 639kB       61
+f44dd03b0322        db2                 150.83%             2.176GiB / 11.61GiB   18.74%              2.7MB / 2.29MB      174MB / 639kB       336
+29c1fe575679        db3                 0.76%               400.3MiB / 11.61GiB   3.37%               56.8kB / 0B         95.4MB / 639kB      56
+de5e5e4e37a8        db1                 67.88%              2.096GiB / 11.61GiB   18.05%              1.84MB / 1.66MB     180MB / 639kB       477
+[2J[HCONTAINER ID        NAME                CPU %               MEM USAGE / LIMIT     MEM %               NET I/O             BLOCK I/O           PIDS
+5904f4e4a0a9        db0                 0.87%               453.2MiB / 11.61GiB   3.81%               63.9kB / 2.59kB     190MB / 639kB       61
+f44dd03b0322        db2                 150.83%             2.176GiB / 11.61GiB   18.74%              2.7MB / 2.29MB      174MB / 639kB       336
+29c1fe575679        db3                 0.76%               400.3MiB / 11.61GiB   3.37%               56.8kB / 0B         95.4MB / 639kB      56
+de5e5e4e37a8        db1                 67.88%              2.096GiB / 11.61GiB   18.05%              1.84MB / 1.66MB     180MB / 639kB       477
+[2J[HCONTAINER ID        NAME                CPU %               MEM USAGE / LIMIT     MEM %               NET I/O             BLOCK I/O           PIDS
+5904f4e4a0a9        db0                 0.45%               453.2MiB / 11.61GiB   3.81%               63.9kB / 2.59kB     190MB / 639kB       61
+f44dd03b0322        db2                 407.95%             2.179GiB / 11.61GiB   18.76%              2.97MB / 2.6MB      174MB / 639kB       341
+29c1fe575679        db3                 0.50%               400.4MiB / 11.61GiB   3.37%               56.8kB / 0B         95.4MB / 639kB      56
+de5e5e4e37a8        db1                 183.17%             2.315GiB / 11.61GiB   19.94%              1.93MB / 1.76MB     180MB / 639kB       478
+[2J[HCONTAINER ID        NAME                CPU %               MEM USAGE / LIMIT     MEM %               NET I/O             BLOCK I/O           PIDS
+5904f4e4a0a9        db0                 0.45%               453.2MiB / 11.61GiB   3.81%               63.9kB / 2.59kB     190MB / 639kB       61
+f44dd03b0322        db2                 407.95%             2.179GiB / 11.61GiB   18.76%              2.97MB / 2.6MB      174MB / 639kB       341
+29c1fe575679        db3                 0.50%               400.4MiB / 11.61GiB   3.37%               56.8kB / 0B         95.4MB / 639kB      56
+de5e5e4e37a8        db1                 183.17%             2.315GiB / 11.61GiB   19.94%              1.93MB / 1.76MB     180MB / 639kB       478
+[2J[HCONTAINER ID        NAME                CPU %               MEM USAGE / LIMIT     MEM %               NET I/O             BLOCK I/O           PIDS
+5904f4e4a0a9        db0                 0.74%               453.2MiB / 11.61GiB   3.81%               63.9kB / 2.59kB     190MB / 639kB       61
+f44dd03b0322        db2                 334.11%             2.18GiB / 11.61GiB    18.77%              3.12MB / 2.78MB     174MB / 639kB       345
+29c1fe575679        db3                 0.73%               400.3MiB / 11.61GiB   3.37%               56.8kB / 0B         95.4MB / 639kB      56
+de5e5e4e37a8        db1                 187.82%             2.639GiB / 11.61GiB   22.72%              1.95MB / 1.79MB     180MB / 639kB       478
+[2J[HCONTAINER ID        NAME                CPU %               MEM USAGE / LIMIT     MEM %               NET I/O             BLOCK I/O           PIDS
+5904f4e4a0a9        db0                 0.74%               453.2MiB / 11.61GiB   3.81%               63.9kB / 2.59kB     190MB / 639kB       61
+f44dd03b0322        db2                 334.11%             2.18GiB / 11.61GiB    18.77%              3.12MB / 2.78MB     174MB / 639kB       345
+29c1fe575679        db3                 0.73%               400.3MiB / 11.61GiB   3.37%               56.8kB / 0B         95.4MB / 639kB      56
+de5e5e4e37a8        db1                 187.82%             2.639GiB / 11.61GiB   22.72%              1.95MB / 1.79MB     180MB / 639kB       478
+[2J[HCONTAINER ID        NAME                CPU %               MEM USAGE / LIMIT     MEM %               NET I/O             BLOCK I/O           PIDS
+5904f4e4a0a9        db0                 0.72%               453.2MiB / 11.61GiB   3.81%               63.9kB / 2.59kB     190MB / 639kB       61
+f44dd03b0322        db2                 259.13%             2.687GiB / 11.61GiB   23.14%              3.17MB / 2.84MB     174MB / 639kB       349
+29c1fe575679        db3                 0.69%               400.4MiB / 11.61GiB   3.37%               56.8kB / 0B         95.4MB / 639kB      56
+de5e5e4e37a8        db1                 147.56%             2.641GiB / 11.61GiB   22.74%              1.97MB / 1.82MB     180MB / 639kB       478
+[2J[HCONTAINER ID        NAME                CPU %               MEM USAGE / LIMIT     MEM %               NET I/O             BLOCK I/O           PIDS
+5904f4e4a0a9        db0                 0.72%               453.2MiB / 11.61GiB   3.81%               63.9kB / 2.59kB     190MB / 639kB       61
+f44dd03b0322        db2                 259.13%             2.687GiB / 11.61GiB   23.14%              3.17MB / 2.84MB     174MB / 639kB       349
+29c1fe575679        db3                 0.69%               400.4MiB / 11.61GiB   3.37%               56.8kB / 0B         95.4MB / 639kB      56
+de5e5e4e37a8        db1                 147.56%             2.641GiB / 11.61GiB   22.74%              1.97MB / 1.82MB     180MB / 639kB       478
+[2J[HCONTAINER ID        NAME                CPU %               MEM USAGE / LIMIT     MEM %               NET I/O             BLOCK I/O           PIDS
+5904f4e4a0a9        db0                 0.45%               453.2MiB / 11.61GiB   3.81%               63.9kB / 2.59kB     190MB / 639kB       61
+f44dd03b0322        db2                 524.14%             2.689GiB / 11.61GiB   23.15%              3.35MB / 3.12MB     174MB / 639kB       352
+29c1fe575679        db3                 0.46%               400.4MiB / 11.61GiB   3.37%               56.8kB / 0B         95.4MB / 639kB      56
+de5e5e4e37a8        db1                 0.63%               2.641GiB / 11.61GiB   22.74%              1.97MB / 1.82MB     180MB / 639kB       478
+[2J[HCONTAINER ID        NAME                CPU %               MEM USAGE / LIMIT     MEM %               NET I/O             BLOCK I/O           PIDS
+5904f4e4a0a9        db0                 0.45%               453.2MiB / 11.61GiB   3.81%               63.9kB / 2.59kB     190MB / 639kB       61
+f44dd03b0322        db2                 524.14%             2.689GiB / 11.61GiB   23.15%              3.35MB / 3.12MB     174MB / 639kB       352
+29c1fe575679        db3                 0.46%               400.4MiB / 11.61GiB   3.37%               56.8kB / 0B         95.4MB / 639kB      56
+de5e5e4e37a8        db1                 0.63%               2.641GiB / 11.61GiB   22.74%              1.97MB / 1.82MB     180MB / 639kB       478
+[2J[HCONTAINER ID        NAME                CPU %               MEM USAGE / LIMIT     MEM %               NET I/O             BLOCK I/O           PIDS
+5904f4e4a0a9        db0                 0.75%               453.4MiB / 11.61GiB   3.81%               64kB / 2.72kB       190MB / 639kB       61
+f44dd03b0322        db2                 213.33%             2.698GiB / 11.61GiB   23.23%              3.67MB / 3.38MB     174MB / 639kB       352
+29c1fe575679        db3                 0.53%               400.4MiB / 11.61GiB   3.37%               56.8kB / 0B         95.4MB / 639kB      56
+de5e5e4e37a8        db1                 87.91%              2.641GiB / 11.61GiB   22.74%              2.18MB / 1.98MB     180MB / 639kB       478
+[2J[HCONTAINER ID        NAME                CPU %               MEM USAGE / LIMIT     MEM %               NET I/O             BLOCK I/O           PIDS
+5904f4e4a0a9        db0                 0.75%               453.4MiB / 11.61GiB   3.81%               64kB / 2.72kB       190MB / 639kB       61
+f44dd03b0322        db2                 213.33%             2.698GiB / 11.61GiB   23.23%              3.67MB / 3.38MB     174MB / 639kB       352
+29c1fe575679        db3                 0.53%               400.4MiB / 11.61GiB   3.37%               56.8kB / 0B         95.4MB / 639kB      56
+de5e5e4e37a8        db1                 87.91%              2.641GiB / 11.61GiB   22.74%              2.18MB / 1.98MB     180MB / 639kB       478
+[2J[HCONTAINER ID        NAME                CPU %               MEM USAGE / LIMIT     MEM %               NET I/O             BLOCK I/O           PIDS
+5904f4e4a0a9        db0                 0.75%               453.4MiB / 11.61GiB   3.81%               64kB / 2.72kB       190MB / 639kB       61
+f44dd03b0322        db2                 213.33%             2.698GiB / 11.61GiB   23.23%              3.67MB / 3.38MB     174MB / 639kB       352
+29c1fe575679        db3                 0.53%               400.4MiB / 11.61GiB   3.37%               56.8kB / 0B         95.4MB / 639kB      56
+de5e5e4e37a8        db1                 87.91%              2.641GiB / 11.61GiB   22.74%              2.18MB / 1.98MB     180MB / 639kB       478
+[2J[HCONTAINER ID        NAME                CPU %               MEM USAGE / LIMIT     MEM %               NET I/O             BLOCK I/O           PIDS
+5904f4e4a0a9        db0                 2.00%               453.4MiB / 11.61GiB   3.81%               64kB / 2.72kB       191MB / 639kB       61
+f44dd03b0322        db2                 102.80%             2.712GiB / 11.61GiB   23.35%              3.67MB / 3.38MB     174MB / 639kB       352
+29c1fe575679        db3                 0.79%               400.4MiB / 11.61GiB   3.37%               56.8kB / 0B         95.4MB / 639kB      56
+de5e5e4e37a8        db1                 1.40%               2.641GiB / 11.61GiB   22.74%              2.18MB / 1.98MB     180MB / 639kB       478
+[2J[HCONTAINER ID        NAME                CPU %               MEM USAGE / LIMIT     MEM %               NET I/O             BLOCK I/O           PIDS
+5904f4e4a0a9        db0                 2.00%               453.4MiB / 11.61GiB   3.81%               64kB / 2.72kB       191MB / 639kB       61
+f44dd03b0322        db2                 102.80%             2.712GiB / 11.61GiB   23.35%              3.67MB / 3.38MB     174MB / 639kB       352
+29c1fe575679        db3                 0.79%               400.4MiB / 11.61GiB   3.37%               56.8kB / 0B         95.4MB / 639kB      56
+de5e5e4e37a8        db1                 1.40%               2.641GiB / 11.61GiB   22.74%              2.18MB / 1.98MB     180MB / 639kB       478
+[2J[HCONTAINER ID        NAME                CPU %               MEM USAGE / LIMIT     MEM %               NET I/O             BLOCK I/O           PIDS
+5904f4e4a0a9        db0                 1.22%               453.4MiB / 11.61GiB   3.81%               64kB / 2.72kB       191MB / 639kB       61
+f44dd03b0322        db2                 1.19%               2.712GiB / 11.61GiB   23.35%              3.67MB / 3.38MB     174MB / 639kB       352
+29c1fe575679        db3                 1.06%               400.4MiB / 11.61GiB   3.37%               56.8kB / 0B         95.4MB / 639kB      56
+de5e5e4e37a8        db1                 1.08%               2.641GiB / 11.61GiB   22.74%              2.18MB / 1.98MB     180MB / 639kB       478
+[2J[HCONTAINER ID        NAME                CPU %               MEM USAGE / LIMIT     MEM %               NET I/O             BLOCK I/O           PIDS
+5904f4e4a0a9        db0                 1.22%               453.4MiB / 11.61GiB   3.81%               64kB / 2.72kB       191MB / 639kB       61
+f44dd03b0322        db2                 1.19%               2.712GiB / 11.61GiB   23.35%              3.67MB / 3.38MB     174MB / 639kB       352
+29c1fe575679        db3                 1.06%               400.4MiB / 11.61GiB   3.37%               56.8kB / 0B         95.4MB / 639kB      56
+de5e5e4e37a8        db1                 1.08%               2.641GiB / 11.61GiB   22.74%              2.18MB / 1.98MB     180MB / 639kB       478
+[2J[HCONTAINER ID        NAME                CPU %               MEM USAGE / LIMIT     MEM %               NET I/O             BLOCK I/O           PIDS
+5904f4e4a0a9        db0                 1.05%               453.4MiB / 11.61GiB   3.81%               64kB / 2.72kB       191MB / 639kB       61
+f44dd03b0322        db2                 1.54%               2.702GiB / 11.61GiB   23.26%              3.67MB / 3.38MB     175MB / 639kB       352
+29c1fe575679        db3                 1.02%               400.4MiB / 11.61GiB   3.37%               56.8kB / 0B         95.4MB / 639kB      56
+de5e5e4e37a8        db1                 1.32%               2.634GiB / 11.61GiB   22.68%              2.18MB / 1.98MB     180MB / 639kB       478

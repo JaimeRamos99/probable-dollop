@@ -5,7 +5,7 @@ async function generateCommand(i){//actual iteration
     }else{
         command = `docker run --name db${i} -p${3000 + 3*(i-1) + 1}:7474 -p${3000 + 3*(i-1) + 2}:7473 -p${3000 + 3*(i-1) + 3}:7687 -d -v /db${i}/data:/data -v /db${i}/logs:/logs -v /db${i}/conf:/conf --env NEO4J_AUTH=none neo4j`;
     }
-     exec(command,( error, stdout, stderr) =>{
+     exec(command,( error, stdout, stderr) => {
         if(error){
             console.log(`error: ${error.message}`);
         }
