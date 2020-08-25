@@ -5,7 +5,7 @@ async function createPartition(ip, array) {
   const session = driver.session();
   await session
     .run('UNWIND $r AS map create(n) SET n = map', { r: array })
-    .then(function (result) {});
+    .then(function (result) { });
   await session.close();
 }
 async function createRelationship(ip, id, array) {
@@ -21,7 +21,7 @@ async function createRelationship(ip, id, array) {
       'MATCH (n), (m) WHERE n.id IN $array AND m.id = $id CREATE (m)-[r:connected]->(n) return r',
       { array: newArray, id: id }
     )
-    .then(function (result) {});
+    .then(function (result) { });
   await session.close();
   newArray = [];
 }
