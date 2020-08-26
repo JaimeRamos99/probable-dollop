@@ -48,7 +48,7 @@ router.get('/query/:id', async function (req, res) {
   if (!flag) {
     flag = true;
     t0 = now();
-    exec('docker stats > oneThousand15k.txt', function (error, stdout, stderr) {
+    exec('docker stats > fiveThousand65k.txt', function (error, stdout, stderr) {
       if (error) {
         console.log(`error: ${error.message}`);
       }
@@ -59,7 +59,7 @@ router.get('/query/:id', async function (req, res) {
   }
 
   await neo4j.retreiveNode(ip, idNode);
-  if (idNode === 1001) {
+  if (idNode === 5001) {
     let t1 = now();
     flag = false;
     console.log(`${(t1 - t0).toFixed(5)} milliseconds.`);
@@ -67,8 +67,18 @@ router.get('/query/:id', async function (req, res) {
   }
   res.status(200).send('ok');
 });
-/*1000 queries para el grafo de 5k demoró 2201.14301 milliseconds.
+/*
+  Metis:
+  1000 queries para el grafo de 5k demoró 2201.14301 milliseconds.
   5000 queries para el grafo de 5k demoró 5994.85929 milliseconds.
 
+  1000 queries para el grafo de 15k demoró 2885.06526 milliseconds.
+  5000 queries para el grafo de 15k demoró 6983.35903 milliseconds.
+
+  1000 queries para el grafo de 35k demoró 3404.10155 milliseconds.
+  5000 queries para el grafo de 35k demoró 9922.99331 milliseconds.
+
+  1000 queries para el grafo de 65k demoró 11349.97554 milliseconds.
+  5000 queries para el grafo de 65k demoró 6974.73644 milliseconds.
 */
 //el 5k al final o sus semenjantes hace referencia la tamaño del grafo
